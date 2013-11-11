@@ -26,10 +26,11 @@
                 <a class="brand" href="#">AdBase Beta</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("Employee", "create", "Employee")</li><li class="active"><a href="#">Home</a></li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+                        <li class="active"><a href="#">Home</a></li>
                         @*<li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>*@
                         <li class="dropdown">
@@ -44,12 +45,25 @@
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-                    </ul>
-                    <form class="navbar-form pull-right">
+
+                        @*                    <form class="navbar-form pull-right">
                         <input class="span2" type="text" placeholder="Email">
                         <input class="span2" type="password" placeholder="Password">
                         <button type="submit" class="btn">Sign in</button>
-                    </form>
+                    </form>*@
+   @*                 <section id="login">*@
+                        @Html.Partial("_LoginPartial")
+@*                    </section>*@
+@*                        @if (!Request.IsAuthenticated)
+                        {
+                            <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                            <li>@Html.ActionLink("Log In", "Login", "Account")</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Manage Account", "Manage", "Account")</li>
+                        }*@
+                    </ul>
                 </div>
                 <!--/.nav-collapse -->
             </div>
@@ -85,7 +99,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                <p>&copy; @DateTime.Now.Year - JDH  -->  NYU 9799 Midterm Application</p>
             </div>
         </div>
     </footer>
