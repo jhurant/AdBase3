@@ -29,7 +29,11 @@
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+<<<<<<< HEAD
                         <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+=======
+                        <li>@Html.ActionLink("Employee", "create", "Employee")</li>
+>>>>>>> 7657a1f9fefefda905b294e27dc2f6f7d2bdd739
                         <li class="active"><a href="#">Home</a></li>
                         @*<li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>*@
@@ -51,10 +55,14 @@
                         <input class="span2" type="password" placeholder="Password">
                         <button type="submit" class="btn">Sign in</button>
                     </form>*@
+<<<<<<< HEAD
    @*                 <section id="login">*@
                         @Html.Partial("_LoginPartial")
 @*                    </section>*@
 @*                        @if (!Request.IsAuthenticated)
+=======
+                        @if (!Request.IsAuthenticated)
+>>>>>>> 7657a1f9fefefda905b294e27dc2f6f7d2bdd739
                         {
                             <li>@Html.ActionLink("Register", "Register", "Account")</li>
                             <li>@Html.ActionLink("Log In", "Login", "Account")</li>
@@ -62,7 +70,11 @@
                         else
                         {
                             <li>@Html.ActionLink("Manage Account", "Manage", "Account")</li>
+<<<<<<< HEAD
                         }*@
+=======
+                        }
+>>>>>>> 7657a1f9fefefda905b294e27dc2f6f7d2bdd739
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
