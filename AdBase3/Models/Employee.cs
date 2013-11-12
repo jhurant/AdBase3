@@ -8,22 +8,24 @@ namespace AdBase3.Models
 {
     public class Employee
     {
-    public int EmpId { get; set;}
- 	public int Id { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int CompanyNo { get; set; }
-    public string CountryCode { get; set; }
-    public string Telephone { get; set; }    
-    public string TelExt { get; set; }    
-    public string LocId { get; set; }    
-    public string email { get; set; }   
-     public string FaxNo { get; set; }
-    public DateTime StartDate {get; set;}
-    public DateTime CreateDate {get; set;}
-    public DateTime EndDate {get; set;}
-    public DateTime LastChanged {get; set;}
-    public Boolean Active {get; set;}
-        
+        //Look into the virtual keyword and entity framework here to figure out where things are being stored.
+
+        public int EmpId { get; set; }  
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int CompanyNo { get; set; }
+        public string CountryCode { get; set; }
+        public string Telephone { get; set; }
+        public string TelExt { get; set; }
+        public string LocId { get; set; }
+        public string email { get; set; }
+        public string FaxNo { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime CreateDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public DateTime LastChanged { get; set; }
+        public Boolean Active { get; set; }
+
     }
 }

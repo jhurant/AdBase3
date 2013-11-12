@@ -25,7 +25,7 @@ namespace AdBase3
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/site.css",
+                //"~/Content/site.css",
                 "~/Content/bootstrap.css",
                 "~/Content/bootstrap-responsive.css"
                 ));
