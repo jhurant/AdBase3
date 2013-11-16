@@ -167,6 +167,13 @@ footer {
         text-decoration: underline;
     }
 
+    #login a.logout {
+        background: none;
+        margin: 0;
+        padding: 100px;
+        text-decoration: underline;
+    }
+
     #login ul {
         margin: 0;
     }

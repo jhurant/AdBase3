@@ -30,11 +30,6 @@
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
-@*                        <li>@Html.ActionLink("Employee", "create", "Employee")</li>
->>>>>>> 7657a1f9fefefda905b294e27dc2f6f7d2bdd739
-                        <li class="active"><a href="#">Home</a></li>*@
-                        @*<li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>*@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -47,13 +42,6 @@
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-
-                        @*                    <form class="navbar-form pull-right">
-                        <input class="span2" type="text" placeholder="Email">
-                        <input class="span2" type="password" placeholder="Password">
-                        <button type="submit" class="btn">Sign in</button>
-                    </form>*@
-   @*                 <section id="login">*@
                         @Html.Partial("_LoginPartial")
 @*                    </section>*@
 @*                        @if (!Request.IsAuthenticated)
@@ -68,9 +56,9 @@
                         {
                             <li>@Html.ActionLink("Manage Account", "Manage", "Account")</li>
 <<<<<<< HEAD
-                        }*@
-
                         }
+
+                        }*@
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -113,6 +101,7 @@
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
+        <script src="~/Scripts/bootstrap.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
