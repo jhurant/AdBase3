@@ -48,9 +48,9 @@ namespace AdBase3.Controllers
         //
         // POST: /Account/LogOff
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [AllowAnonymous]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[AllowAnonymous]
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
