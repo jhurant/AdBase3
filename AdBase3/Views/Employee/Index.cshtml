@@ -4,10 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>List of Employees</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button  type="button" class="btn btn-primary btn-lg" onclick="location.href='@Url.Action("Create", "Employee")';return false;">Create New</button>
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
 <table class="table table-striped">
     <tr>
@@ -41,7 +42,7 @@
         <th>
             @Html.DisplayNameFor(model => model.FaxNo)
         </th>
-       @* <th>
+        @* <th>
             @Html.DisplayNameFor(model => model.StartDate)
         </th>
         <th>
@@ -59,39 +60,40 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmpId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyNo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CountryCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telephone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelExt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LocId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FaxNo)
-        </td>
-    @*    <td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelExt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaxNo)
+            </td>
+            @*    <td>
             @Html.DisplayFor(modelItem => item.StartDate)
         </td>
         <td>
@@ -100,20 +102,22 @@
         <td>
             @Html.DisplayFor(modelItem => item.EndDate)
         </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.LastChanged)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Active)
-        </td>
-        <td>
-            <span>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.Id, }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-                </span>
-        </td>
-    </tr>
-}
+            <td>
+                @Html.DisplayFor(modelItem => item.LastChanged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                <div class="btn-group btn-group-justified">
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.Id}, new {@class="button type=btn btn-default"})*@
+                    <button  type="button" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Employee",  new { id = item.Id})';return false;">Edit</button>
+                    <button onclick="location.href='@Url.Action("Details", "Employee",  new { id = item.Id})';return false;" type="button" class="btn btn-default">Details</button>
+                    <button onclick="location.href='@Url.Action("Delete", "Employee",  new { id = item.Id})';return false;" type="button" class="btn btn-default">Details</button>
+                                
+                </div>
+            </td>
+        </tr>
+    }
 
 </table>
