@@ -112,8 +112,8 @@
                 <div class="btn-group btn-group-justified">
                         @*@Html.ActionLink("Edit", "Edit", new { id = item.Id}, new {@class="button type=btn btn-default"})*@
                     <button  type="button" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Employee",  new { id = item.Id})';return false;">Edit</button>
-                    <button onclick="location.href='@Url.Action("Details", "Employee",  new { id = item.Id})';return false;" type="button" class="btn btn-default">Details</button>
-                    <button onclick="location.href='@Url.Action("Delete", "Employee",  new { id = item.Id})';return false;" type="button" class="btn btn-default">Details</button>
+@*                    <button onclick="location.href='@Url.Action("Details", "Employee",  new { id = item.Id})';return false;" type="button" class="btn btn-default">Details</button>*@
+                    <button onclick="location.href='@Url.Action("Delete", "Employee",  new { id = item.Id})';return false;" type="button" class="btn btn-default">Delete</button>
                                 
                 </div>
             </td>
@@ -121,3 +121,7 @@
     }
 
 </table>
+<p>
+    <button  type="button" class="btn btn-primary btn-lg" onclick="location.href='@Url.Action("Create", "Employee")';return false;">Create New</button>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>

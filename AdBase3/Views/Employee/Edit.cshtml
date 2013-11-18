@@ -4,10 +4,9 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit Employee @Model.EmpId</h2>
+<h2>Editing Employee @Model.EmpId</h2>
 
-@using (Html.BeginForm())
-{
+@using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -105,6 +104,14 @@
         </div>
 
         <div class="editor-label">
+            @Html.LabelFor(model => model.CreateDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreateDate)
+            @Html.ValidationMessageFor(model => model.CreateDate)
+        </div>
+
+        <div class="editor-label">
             @Html.LabelFor(model => model.EndDate)
         </div>
         <div class="editor-field">
@@ -112,45 +119,21 @@
             @Html.ValidationMessageFor(model => model.EndDate)
         </div>
 
-           <div class="editor-label">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastChanged)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastChanged)
+            @Html.ValidationMessageFor(model => model.LastChanged)
+        </div>
+
+        <div class="editor-label">
             @Html.LabelFor(model => model.Active)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Active)
             @Html.ValidationMessageFor(model => model.Active)
         </div>
-
-        @*<div class="editor-label">
-            @Html.LabelFor(model => model.CreateDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CreateDate)
-            @Html.ValidationMessageFor(model => model.CreateDate)
-        </div>*@
-        <div class="display-label">
-            @Html.DisplayNameFor(model => model.CreateDate)
-        </div>
-        <div class="display-field">
-            @Html.DisplayFor(model => model.CreateDate)
-        </div>
-
-
-
-        @* <div class="editor-label">
-            @Html.LabelFor(model => model.LastChanged)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.LastChanged)
-            @Html.ValidationMessageFor(model => model.LastChanged)
-        </div>*@
-        <div class="display-label">
-            @Html.DisplayNameFor(model => model.LastChanged)
-        </div>
-        <div class="display-field">
-            @Html.DisplayFor(model => model.LastChanged)
-        </div>
-
-     
 
         <p>
             <input type="submit" value="Save" />

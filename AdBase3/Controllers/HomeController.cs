@@ -10,7 +10,7 @@ namespace AdBase3.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            ViewBag.Message = "On the Run with AdBase";
 
             return View();
         }
@@ -24,7 +24,7 @@ namespace AdBase3.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Only for compliments please....";
 
             return View();
         }
