@@ -82,6 +82,7 @@ namespace AdBase3.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(employee).State = EntityState.Modified;
+                //  Add some code here to catch the exception of wrong type data saved.
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
